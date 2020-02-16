@@ -16,8 +16,9 @@ function result(numbers, cost, percent) {
   let resultPercent = percent.value;
   if (workout.value < 70) {
     resultPercent -= 2;
-  } else if (workout.value >= 131) {
-    resultPercent += 2;
+  }
+  if (workout.value >= 131) {
+    resultPercent = +resultPercent + 2;
   }
 
   const result = (numbers.value * cost.value * resultPercent) / 100;
