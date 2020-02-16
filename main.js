@@ -13,15 +13,20 @@ const total = formResult.elements.total;
 
 // расчитываем
 function result(numbers, cost, percent) {
+  let resultCost = cost.value;
+  
+
   let resultPercent = percent.value;
-  if (workout.value < 70) {
+    if (workout.value >= 131 && resultPercent == "46") {
+      resultPercent = +resultPercent + 4;
+    } else if (workout.value < 70) {
     resultPercent = +resultPercent - 2;
-  }
-  if (workout.value >= 131) {
+  } else if (workout.value >= 131) {
     resultPercent = +resultPercent + 2;
   }
 
-  const result = (numbers.value * cost.value * resultPercent) / 100;
+
+  const result = (numbers.value * resultCost * resultPercent) / 100;
 
   let taxResult = result * 0.13;
   if (result > 40000.0) {
