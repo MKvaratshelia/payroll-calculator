@@ -4,7 +4,7 @@ const workout = form.elements.workout; //количество тренирово
 const percent = form.elements.percent; // процент
 const trainingCost = form.elements.trainingCost; // стоимость тренировки
 const button = form.elements.button;
-
+const popup = document.querySelector(".popup");
 // поля формы с результатами
 const formResult = document.querySelector(".calculator__form-result");
 const salary = formResult.elements.salary;
@@ -15,7 +15,7 @@ const total = formResult.elements.total;
 function result(numbers, cost, percent) {
   let resultPercent = percent.value;
   if (workout.value < 70) {
-    resultPercent -= 2;
+    resultPercent = +resultPercent - 2;
   }
   if (workout.value >= 131) {
     resultPercent = +resultPercent + 2;
@@ -37,4 +37,9 @@ function result(numbers, cost, percent) {
 form.addEventListener("submit", function(event) {
   event.preventDefault();
   result(workout, trainingCost, percent);
+  popup.style.display = "flex";
 });
+
+popup.addEventListener("click", function() {
+  popup.style.display = "none";
+})
