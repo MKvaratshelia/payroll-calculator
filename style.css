@@ -1,3 +1,16 @@
+.header {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.header__title {
+    max-width: 90%;
+    font-family: "Roboto", sans-serif;
+    margin: 20px 0 40px;
+    max-width: 90%;
+    font-size: 42px;
+    text-align: center;
+}
 .container {
     width: 100vw;
     height: 100vh;
@@ -5,7 +18,6 @@
     color: black;
     display: flex;
     justify-content: center;
-    align-items: center;
     font-family: "Roboto", sans-serif;
 }
  .calculator {
@@ -14,11 +26,12 @@
     align-items: center;
     width: 90%;
 } 
-.calculator__title {
+/* .calculator__title {
+    margin: 0;
     max-width: 90%;
     font-size: 42px;
     text-align: center;
-}
+} */
 .calculator__form {
     display: flex;
     flex-direction: column;
@@ -30,6 +43,10 @@
     width: 100%;
     height: 30px;
     font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #c6d0c2 ;
+    margin-bottom: 20px;
+    -webkit-appearance: none;
 }
 
 .calculator__form-button {
@@ -49,17 +66,10 @@
     flex-direction: column;
 }
 
-.form__input {
-    margin-bottom: 20px;
-}
-
 .calculator__percent {
     margin-bottom: 20px;
 }
-.form__input{
-    border: none;
-    border-bottom: 2px solid #c6d0c2 ;
-}
+
 .calculator__numbers-workouts:invalid {
     border-bottom: red 2px solid;
 }
