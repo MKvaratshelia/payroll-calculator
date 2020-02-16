@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Расчёт зарплаты</title>
+</head>
+<body>
+    <div class="container">
+        <section class="calculator">
+            <h1 class="calculator__title">Калькулятор зарплаты</h1>
+            <form action="" class="calculator__form">
+                <input type="text" class="form__input calculator__numbers-workouts" name="workout" placeholder="Введите число тренировок" required pattern="([1-9])+\d*\d*" minlength="1" maxlength="3">
+                <select name="percent" id="" class="form__input calculator__percent" required>
+                    <option value="" selected disabled>Выберите базовый процент</option>
+                    <option value="42" class="calculator__percent-item">42%</option>
+                    <option value="44" class="calculator__percent-item">44%</option>
+                    <option value="46" class="calculator__percent-item">46%</option>
+                    <option value="48" class="calculator__percent-item">48%</option>
+                </select>
+                <select name="trainingCost" id="" required class="form__input calculator__training-cost" required>
+                    <option value=""selected disabled>Выберите свою категорию</option>
+                    <option value="1100">Мастер</option>
+                    <option value="1300">Профи</option>
+                    <option value="1600">Эксперт</option>
+                </select>
+                <button type="submit" name="button" class="calculator__form-button">Рассчитать</button>
+            </form>
+            <form action="" name="result" class="calculator__form-result">
+                <label for="salary">Общая сумма</label>
+                <input type="text" name="salary" class="form__input calculator__result-salary" readonly>
+                <label for="tax">Налог 13%</label>
+                <input type="text" name="tax" class="form__input" readonly >
+                <label for="total">Сумма после вычета налога</label>
+                <input type="text" name="total" class="form__input" readonly>
+            </form>
+        </section>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+ .calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+} 
+.calculator__title {
+    max-width: 90%;
+    font-size: 42px;
+    text-align: center;
+}
+.calculator__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 90%;
+}
+.form__input {
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+}
+
+.calculator__form-button {
+    width: 200px;
+    height: 40px;
+    background-color: red;
+    border: none;
+    color: white;
+}
+.calculator__form-button:active {
+    background-color: green;
+}
+
+.calculator__form-result {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input {
+    margin-bottom: 20px;
+}
+
+.calculator__percent {
+    margin-bottom: 20px;
+}
+.form__input{
+    border: none;
+    border-bottom: 2px solid #c6d0c2 ;
+}
+.calculator__numbers-workouts:invalid {
+    border-bottom: red 2px solid;
+}
+.calculator__numbers-workouts:valid {
+    border-bottom: green 1px solid;
+}
